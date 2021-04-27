@@ -1,0 +1,17 @@
+version: 0.1
+
+phases:
+  pre_build:
+    commands:
+      - echo Entered prebuild phase
+  build:
+    commands:
+      - echo Build started
+      - mvn clean package
+  post_build:
+    commands:
+      - echo Build completed
+artifacts:
+  files:
+    - target/ShoppingCart-1.jar
+  discard-paths: yes
